@@ -5,7 +5,9 @@ body{
     height: 100vh;
     margin: 0px;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
+
 
 /* Width of the scrollbar */
 ::-webkit-scrollbar {
@@ -43,6 +45,10 @@ body{
   .scroll-item {
     width: 100%;
     scroll-snap-align: start;
+    box-sizing: border-box;
+    /* padding-top: 50px; */
+    height: 100vh;
+    max-height: 100vh;
   }
 
 /* animation intro page */
@@ -56,7 +62,7 @@ body{
     right: 1%;
     z-index: -1;
     rotate: 30deg;
-    translate: 100px;
+    translate:  200px 200px;
     scale: 3;
     opacity: 10%;
 }
@@ -66,7 +72,7 @@ body{
     z-index: -1;
     rotate: 50deg;
     translate: -100px 90px;
-    scale: 3 3.3;
+    scale: 3.8;
     opacity: 30%;
 }
 .intro-anim3{
@@ -75,7 +81,7 @@ body{
     z-index: -1;
     rotate: 10deg;
     translate: 400px 200px;
-    scale: 2 5;
+    scale: 2 6;
     opacity: 50%;
 }
 

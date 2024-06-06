@@ -33,6 +33,7 @@ var portfolioData = {
       React.js for frontend, creating a complete solution for campus
       transportation.`,
     },
+
     {
       name: "sist hub",
       link: "https://github.com/code-bhuvanesh/sist_hub_app",
@@ -54,6 +55,15 @@ var portfolioData = {
       music playback.
       `,
     },
+    {
+      name: "grocery picker",
+      link: "https://github.com/code-bhuvanesh/grocery-picker",
+      image: "/project_backgrounds/grocery_picker.jpg",
+      description: `Grocery Picker is an e-commerce app that connects shopkeepers directly with 
+      customers, allowing them to sell groceries online. Shopkeepers can create their store profiles 
+      and list the items they have in stock. Customers can browse nearby shops, view available items, 
+      add them to their cart, make payments, and place orders conveniently.`,
+    },
   ],
 
   skills: {
@@ -61,7 +71,7 @@ var portfolioData = {
     Technologies: ["Flutter", "React JS", "ESP32 IOT"],
     backend: ["Django", "Firebase"],
     database: ["My SQL", "PostgreSQL"],
-    mnbv: ["c# .Net winui 3 [worked as a side project]"],
+    "Little Known": ["c# .Net winui 3 [worked as a side project]"],
   },
 };
 

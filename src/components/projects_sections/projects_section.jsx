@@ -10,7 +10,7 @@ function ProjectsSection() {
         <p>see all</p>
       </div>
       <div className="projects-cotainer">
-        {portfolioData.Projects.map((data) => {
+        {portfolioData.Projects.slice(0, 3).map((data) => {
           // console.log(data);
           return (
             <ProjectCard

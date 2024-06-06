@@ -1,0 +1,40 @@
+.nav-bar{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 20px 0px;
+    top: 0;
+    width: 100%;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    flex: 1;
+}
+
+.nav-link a {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 32px;
+    margin: 0px 40px;
+    transition: .15s ease-in-out;
+}
+
+
+.nav-link a:hover{
+    color: white;
+    scale: 2.1;
+}
