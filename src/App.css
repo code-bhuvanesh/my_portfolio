@@ -1,0 +1,97 @@
+body{
+    background-color: rgb(22, 22, 22);
+    color: rgb(180, 180, 180);
+    font-family: "open sans";
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust as needed */
+    height: 12px; /* For horizontal scrollbar */
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+    background: rgb(22, 22, 22); /* Color of the track */
+    border-radius: 10px;
+}
+
+/* Handle (thumb) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #3f3f3f; /* Color of the thumb */
+    border-radius: 10px;
+}
+
+/* Handle (thumb) when hovered */
+::-webkit-scrollbar-thumb:hover {
+    background: #6b6b6b; /* Color of the thumb when hovered */
+}
+
+
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    height: 100vh;
+  }
+  
+  .scroll-item {
+    width: 100%;
+    scroll-snap-align: start;
+  }
+
+/* animation intro page */
+.intro-anim{
+    /* position: relative; */
+    right: 1%;
+    z-index: -10;
+}
+.intro-anim1{
+    position: absolute;
+    right: 1%;
+    z-index: -1;
+    rotate: 30deg;
+    translate: 100px;
+    scale: 3;
+    opacity: 10%;
+}
+.intro-anim2{
+    position: absolute;
+    right: 1%;
+    z-index: -1;
+    rotate: 50deg;
+    translate: -100px 90px;
+    scale: 3 3.3;
+    opacity: 30%;
+}
+.intro-anim3{
+    position: absolute;
+    right: 1%;
+    z-index: -1;
+    rotate: 10deg;
+    translate: 400px 200px;
+    scale: 2 5;
+    opacity: 50%;
+}
+
+/* animation skills page */
+
+.skills-anim{
+    position: absolute;
+    right: 1%;
+    z-index: -1;
+
+   
+}
+.skills-anim1{
+    position: absolute;
+    right: 1%;
+    z-index: -1;
+    rotate: 30deg;
+    translate: 100px 10px;
+}

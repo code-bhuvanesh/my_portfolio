@@ -1,0 +1,34 @@
+.social-media-icon{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    transition: .3s ease-in;
+}
+
+.social-media-icon:hover{
+    scale: 1.05;
+}
+
+
+.social-icon{
+    width: 30px;
+    height: 30px;
+    /* background-color: white; */
+
+    border-radius: 100%;
+    object-fit: fill;
+}
+
+
+.icon-name{
+    margin-right:  5px;
+    margin-left:  10px;
+    display: block;
+    font-size: 18px;
+}
+

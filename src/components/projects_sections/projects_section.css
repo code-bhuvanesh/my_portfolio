@@ -1,0 +1,33 @@
+.projectsmain-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.projectsmain-container h1{
+    margin: 50px;
+    font-size: 3em;
+    
+}
+
+.projects-cotainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.all-btn{
+    cursor: pointer;
+    width: 70%;
+    display: flex;
+    justify-content: end;
+}
+.all-btn p{
+    width: fit-content;
+    border: 1px solid white;
+    padding: 5px 15px;
+    padding-top: 3px;
+    border-radius: 10px;
+}

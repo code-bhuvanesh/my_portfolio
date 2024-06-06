@@ -1,0 +1,133 @@
+body{
+    height: 100vh;
+}
+
+.social-container{
+    display: flex;
+    flex-direction: row;
+    margin: 30px 50px;
+}
+
+.intromain-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.intro-container{
+    width: fit-content;
+}
+
+.profile-container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    color: aliceblue;
+    align-items: center;
+}
+
+.profile-container img{
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+    border: .5em solid rgb(66, 63, 63);
+}
+
+
+.more-section{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 50px;
+}
+
+
+.more-section h4{
+    margin: 0px 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+}
+
+.more-section h4:hover{
+    scale: 1.05;
+}
+
+
+h1, h2 {
+    font-family: 'Jetbrains Mono', monospace;
+}
+
+.introtext-container{
+    margin: 150px 50px;
+    margin-bottom: 10px;
+}
+
+.main-intro{
+    margin-bottom: 20px;
+}
+
+/* h1 {
+    font-size: 5em;
+    margin: 0px;
+    color: white;
+
+} */
+
+h1 {
+    font-size: 3.3em;
+    margin: 0px;
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+h2 {
+    font-size: 2.7em;
+    margin: 0px;
+    color: white;
+    margin: 0px;
+}
+h3 {
+    font-size: 2em;
+    /* margin: 0px; */
+}
+
+.intro-text{
+    margin: 5px 0px;
+    max-width: 80%;
+    font-size: 1.3em;
+}
+
+
+.resume-download-btn{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 0px 5px;
+    border-radius: 20px;
+    transition: .2s ease-in-out;
+}
+
+.resume-download-btn:hover{
+    scale: 1.1;
+}
+
+.resume-download-btn img{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    object-fit: fill;
+}
+
+.resume-download-btn h2{
+    margin-right:  5px;
+    margin-left:  10px;
+    display: block;
+    font-size: 18px;
+}
+
+

@@ -1,0 +1,37 @@
+.aboutmain-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.aboutmain-container h1{
+    margin: 50px;
+    font-size: 3em;
+    
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.individual-skills-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.individual-skills-container h3{
+    margin: 0px 10px;
+    font-size: 28px;
+
+}
+.individual-skills-container p{
+    margin: 0px 10px;
+    font-size: 20px;
+    
+}
