@@ -6,7 +6,7 @@ function ProjectCard(props) {
 
   return (
     <div
-      className="projects-card"
+      className="projects-card frosted-container"
       onClick={() => window.open(props.projectlink, "_blank")}
       onMouseEnter={() => setIsCarExpand(true)}
       onMouseLeave={() => setIsCarExpand(false)}

@@ -12,6 +12,8 @@
     justify-content: start;
     align-items: center;
     transition: .2s ease-in-out;
+    background: rgb(10, 10, 10);
+    box-shadow: 10px 10px white;
 }
 
 .projects-card:hover{
@@ -43,4 +45,3 @@
             line-clamp: 4; 
     -webkit-box-orient: vertical;
 }
-

@@ -68,10 +68,17 @@ var portfolioData = {
 
   skills: {
     languages: ["Python", "Java", "Dart", "Kotlin", "Javascript", "C++"],
-    Technologies: ["Flutter", "React JS", "ESP32 IOT"],
-    backend: ["Django", "Firebase"],
-    database: ["My SQL", "PostgreSQL"],
-    "Little Known": ["c# .Net winui 3 [worked as a side project]"],
+    Technologies: [
+      "Flutter",
+      "React JS",
+      "Native Android",
+      "Selenium",
+      "ESP32 IOT",
+    ],
+    // backend: ["Django", "Firebase"],
+    // database: ["My SQL", "PostgreSQL"],
+    "Backend & Database": ["Django", "Firebase", "My SQL", "PostgreSQL"],
+    // "Little Known": ["c# .Net winui 3 [worked as a side project]"],
   },
 };
 
