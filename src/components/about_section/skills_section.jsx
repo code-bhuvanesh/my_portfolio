@@ -5,10 +5,15 @@ function SkillSection(props) {
   return (
     <>
       <div className="individual-skill-container">
-        <h3>{props.skillname}</h3>
+        <h2 style={{ fontSize: "40px", margin: "20px 10px" }}>
+          {props.skillname.toUpperCase()}
+        </h2>
         <ul style={{ padding: "0px" }}>
           {props.skills.map((d) => (
-            <li>{d}</li>
+            <li>
+              <img className="skill-icon" src={`/skill_icons/${d}.png`} />
+              {d}
+            </li>
           ))}
         </ul>
       </div>

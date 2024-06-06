@@ -14,7 +14,7 @@ function AboutSection() {
   });
   return (
     <div className="aboutmain-container">
-      <h1>My Skills</h1>
+      <h1>MY SKILLS</h1>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div className="skills-container">{...skill}</div>
         <Lottie

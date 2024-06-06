@@ -1,10 +1,10 @@
 import "./App.css";
-import AboutSection from "./components/about_section/about_section.jsx";
-import IntroSection from "./components/intro_section/intro_section.jsx";
-import ProjectsSection from "./components/projects_sections/projects_section.jsx";
-import NavBar from "./components/nav_bar/nav_bar.jsx";
+import AboutSection from "../../components/about_section/about_section.jsx";
+import IntroSection from "../../components/intro_section/intro_section.jsx";
+import ProjectsSection from "../../components/projects_sections/projects_section.jsx";
+import NavBar from "../../components/nav_bar/nav_bar.jsx";
 import Lottie from "lottie-react";
-import animationData from "./assets/lottie_anim/box_anim.json";
+import animationData from "../../assets/lottie_anim/box_anim.json";
 import { useRef, useState, useEffect } from "react";
 
 function App() {

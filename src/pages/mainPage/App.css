@@ -1,37 +1,3 @@
-body{
-    background-color: rgb(22, 22, 22);
-    color: rgb(180, 180, 180);
-    font-family: "open sans";
-    height: 100vh;
-    margin: 0px;
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
-
-
-/* Width of the scrollbar */
-::-webkit-scrollbar {
-    width: 12px; /* Adjust as needed */
-    height: 12px; /* For horizontal scrollbar */
-}
-
-/* Track of the scrollbar */
-::-webkit-scrollbar-track {
-    background: rgb(22, 22, 22); /* Color of the track */
-    border-radius: 10px;
-}
-
-/* Handle (thumb) of the scrollbar */
-::-webkit-scrollbar-thumb {
-    background: #3f3f3f; /* Color of the thumb */
-    border-radius: 10px;
-}
-
-/* Handle (thumb) when hovered */
-::-webkit-scrollbar-thumb:hover {
-    background: #6b6b6b; /* Color of the thumb when hovered */
-}
-
 
 .scroll-container {
     display: flex;

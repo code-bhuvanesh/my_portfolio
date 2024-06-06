@@ -11,20 +11,12 @@ function IntroSection() {
           <div className="introtext-container">
             <div className="main-intro">
               {/* <h1>Hi!</h1> */}
-              <h1>HELLO WORLD!</h1>
-              <h2>I am BHUVANESH</h2>
+              {/* <h1>HELLO WORLD!</h1> */}
+              <h1>HELLO WORLD</h1>
+              <h2>I AM BHUVANESH</h2>
             </div>
             <h3>Ready to Build your Apps</h3>
-            <p className="intro-text">
-              I'm an Software developer specializing in building apps with
-              Flutter, also has experience in native development using Java and
-              Kotlin. On the backend, I work with Django and MySQL databases,
-              while my frontend skills include HTML, JavaScript, and CSS. I'm
-              currently exploring React.js and learning about Machine Learning
-              using PyTorch. I'm a quick learner who enjoys acquiring new
-              skills, and I'm ready to bring my knowledge to any development
-              team.
-            </p>
+            <p className="intro-text">{portfolioData["about me"]}</p>
           </div>
           <div className="social-container">
             <div
@@ -32,7 +24,7 @@ function IntroSection() {
               onClick={() => window.open("/my_resume.pdf", "_blank")}
             >
               <img src="/downloads_icon.png" alt="download icon" />
-              <h2>My Resume</h2>
+              <div style={{ margin: "0px 5px" }}>My Resume</div>
             </div>
             {portfolioData["social media"].map((data) => (
               <SocialMediaIcon
