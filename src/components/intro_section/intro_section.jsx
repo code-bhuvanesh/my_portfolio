@@ -30,7 +30,7 @@ function IntroSection() {
               className="resume-download-btn"
               onClick={() => window.open("src/assets/my_resume.pdf", "_blank")}
             >
-              <img src="src\assets\downloads_icon.png" />
+              <img src="\assets\downloads_icon.png" />
               <h2>My Resume</h2>
             </div>
             {portfolioData["social media"].map((data) => (
