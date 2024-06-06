@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     outDir: "dist",
   },
-  publicDir: "public/assets",
+  publicDir: "public",
 });

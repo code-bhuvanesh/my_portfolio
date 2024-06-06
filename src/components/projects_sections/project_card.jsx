@@ -11,7 +11,11 @@ function ProjectCard(props) {
       onMouseEnter={() => setIsCarExpand(true)}
       onMouseLeave={() => setIsCarExpand(false)}
     >
-      <img className="project-image" src={props.projectimage} />
+      <img
+        className="project-image"
+        src={props.projectimage}
+        alt={props.projectName + " icon"}
+      />
       <h2 className="project-name">{props.projectName}</h2>
       <p
         className="project-description"

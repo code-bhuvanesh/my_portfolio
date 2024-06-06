@@ -1,6 +1,7 @@
 import portfolioData from "../../constants.js";
 import "./intro_section.css";
 import SocialMediaIcon from "./social_media_icon.jsx";
+//import images
 
 function IntroSection() {
   return (
@@ -28,9 +29,9 @@ function IntroSection() {
           <div className="social-container">
             <div
               className="resume-download-btn"
-              onClick={() => window.open("src/assets/my_resume.pdf", "_blank")}
+              onClick={() => window.open("/my_resume.pdf", "_blank")}
             >
-              <img src="\assets\downloads_icon.png" />
+              <img src="/downloads_icon.png" alt="download icon"/>
               <h2>My Resume</h2>
             </div>
             {portfolioData["social media"].map((data) => (
@@ -47,7 +48,7 @@ function IntroSection() {
           </div>
         </div>
         <div className="profile-container">
-          <img src="src\assets\my_profile.jpg" alt="my profile" />
+          <img src="/my_profile.jpg" alt="my profile" />
         </div>
       </div>
     </>

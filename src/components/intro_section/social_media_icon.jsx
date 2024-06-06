@@ -12,7 +12,11 @@ function SocialMediaIcon(props) {
       className="social-media-icon"
       style={showname ? { borderColor: "white" } : {}}
     >
-      <img className="social-icon" src={props.iconpath} />
+      <img
+        className="social-icon"
+        src={props.iconpath}
+        alt={props.iconname + " icon"}
+      />
       <h2
         className="icon-name"
         style={{

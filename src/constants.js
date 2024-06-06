@@ -2,17 +2,17 @@ var portfolioData = {
   "social media": [
     {
       name: "github",
-      image: "src/assets/github_icon.png",
+      image: "/github_icon.png",
       link: "https://github.com/code-bhuvanesh",
     },
     {
       name: "linkedin",
-      image: "src/assets/linkedin_icon.png",
+      image: "/linkedin_icon.png",
       link: "https://www.linkedin.com/in/bhuvanesh-devaraj/",
     },
     {
       name: "instagram",
-      image: "src/assets/instagram_icon.png",
+      image: "/instagram_icon.png",
       link: "https://www.instagram.com/ambitious__guy/",
     },
   ],
@@ -22,7 +22,7 @@ var portfolioData = {
     {
       name: "sist nav connect",
       link: "https://github.com/code-bhuvanesh/sist_nav_connect",
-      image: "src/assets/project_backgrounds/nav_connect.jpg",
+      image: "/project_backgrounds/nav_connect.jpg",
       description: `SIST NAV Connect is a bus tracking app for college students, offering
       real-time information on bus routes and arrival times. It uses a custom
       GPS system with ESP32, SIM800L, and NE6M hardware, sending data to a
@@ -36,7 +36,7 @@ var portfolioData = {
     {
       name: "sist hub",
       link: "https://github.com/code-bhuvanesh/sist_hub_app",
-      image: "src/assets/project_backgrounds/sist_hub.jpg",
+      image: "/project_backgrounds/sist_hub.jpg",
       description: `SIST hub app for Sathyabama University aims to encourage seamless
       communication and collaboration among students and staff, enabling
       them to stay connected, informed, and supported across departments.
@@ -47,7 +47,7 @@ var portfolioData = {
     {
       name: "emo tunes",
       link: "https://github.com/code-bhuvanesh/EMO-Tunes",
-      image: "src/assets/project_backgrounds/emo_tunes.jpg",
+      image: "/project_backgrounds/emo_tunes.jpg",
       description: `It is an app where a person can just scan their face and the app
       recognizes their current emotional state (happy, sad, etc...) using AI and
       plays some music related to their emotion state. It uses Spotify for
