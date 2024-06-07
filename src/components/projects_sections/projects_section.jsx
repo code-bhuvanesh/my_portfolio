@@ -6,7 +6,10 @@ function ProjectsSection() {
   return (
     <div className="projectsmain-container">
       <h1>RECENT PROJECTS</h1>
-      <div className="all-btn">
+      <div
+        className="all-btn"
+        onClick={() => (window.location.href = "/projects")}
+      >
         <p>see all</p>
       </div>
       <div className="projects-cotainer">

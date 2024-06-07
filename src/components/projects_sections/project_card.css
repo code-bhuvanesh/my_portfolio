@@ -13,11 +13,14 @@
     align-items: center;
     transition: .2s ease-in-out;
     background: rgb(10, 10, 10);
-    box-shadow: 10px 10px white;
+    /* box-shadow: 5px 5px  white; */
+    box-shadow: 10px 10px 2px 2px white;
 }
 
 .projects-card:hover{
-    scale: 1.05;
+    box-shadow: 15px 15px 3px 3px rgb(179, 179, 179) ;
+    translate: -5px -5px;
+    /* scale: 1.05; */
 }
 
 .project-name{
@@ -29,7 +32,8 @@
 
 
 .project-image{
-   width: auto;
+   width: 20vw;
+   /* height: 30vh; */
    max-height: 300px;
    border-radius: 20px;
    margin: 15px 0px;
