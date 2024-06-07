@@ -47,18 +47,14 @@ function App() {
         <section id="intro" className="scroll-item" name="intro">
           {currentSection === "intro" ? (
             <div className="animation-div">
-              <Lottie
-                className="intro-anim intro-anim1"
-                animationData={animationData}
-              />
-              <Lottie
-                className="intro-anim intro-anim2"
-                animationData={animationData}
-              />
-              <Lottie
-                className="intro-anim intro-anim3"
-                animationData={animationData}
-              />
+              {Array.from(Array(3).keys()).map((e) => (
+                <Lottie
+                  lotti
+                  className={`project-anim project-anim${e + 1}`}
+                  animationData={animationData}
+                  speed={0.5}
+                />
+              ))}
             </div>
           ) : null}
           <IntroSection />

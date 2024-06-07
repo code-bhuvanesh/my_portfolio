@@ -16,7 +16,7 @@ async function fetchScreenshots(repoUrl) {
 
     const data = await response.json();
     const images = data.filter(
-      (file) => file.type === "file" && /\.(png|jpe?g|gif)$/.test(file.name)
+      (file) => file.type === "file" && /\.(png|jpg|gif|jpeg)$/.test(file.name)
     );
     console.log("fetch sucess");
     return images;

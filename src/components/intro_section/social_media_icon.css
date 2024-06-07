@@ -1,5 +1,6 @@
 .social-media-icon{
     display: flex;
+    width: fit-content;
     flex-direction: row;
     margin: 10px 10px;
     align-items: center;

@@ -21,17 +21,70 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 100px 0px;
   padding: 100px 10%;
+  margin-bottom: 200px;
     
 }
   
-  .projects-item {
-    display: flex;
-   padding-top: 200px;
-   scroll-snap-align: start;
-   max-width: 500px;
-   /* width: 30vw; */
-   width: auto;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  }
+.projects-item {
+  display: flex;
+  padding-top: 200px;
+  scroll-snap-align: start;
+  max-width: 500px;
+  /* width: 30vw; */
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.project-anim{
+  /* position: relative; */
+  position: absolute;
+  z-index: -1;
+}
+.project-anim1{
+  right: 1%;
+  rotate: 30deg;
+  translate:  200px 200px;
+  scale: 3;
+  opacity: 10%;
+}
+.project-anim2{
+  right: 1%;
+  rotate: 50deg;
+  translate: -100px 90px;
+  scale: 3.8;
+  opacity: 30%;
+}
+.project-anim3{
+  right: 1%;
+  rotate: 10deg;
+  translate: 400px 200px;
+  scale: 2 6;
+  opacity: 50%;
+}
+
+.project-anim4{
+  left: 1%;
+  rotate: 20deg;
+  translate:  -200px -100px;
+  scale: 3 4;
+  opacity: 10%;
+}
+
+
+.project-anim5{
+  left: 1%;
+  rotate: 10deg;
+  translate: -500px -100px;
+  scale: 1.8;
+  opacity: 0%;
+} 
+.project-anim6{
+  left: 1%;
+  rotate: 20deg;
+  translate: -400px 200px;
+  scale: 2 6;
+  opacity: 50%;
+}

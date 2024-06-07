@@ -20,7 +20,7 @@ function SocialMediaIcon(props) {
       <h2
         className="icon-name"
         style={{
-          display: showname ? "block" : "None",
+          display: showname || props.alwaysVisible ? "block" : "None",
         }}
       >
         {props.iconname}
@@ -28,5 +28,9 @@ function SocialMediaIcon(props) {
     </div>
   );
 }
+
+SocialMediaIcon.defaultProps = {
+  alwaysVisible: true,
+};
 
 export default SocialMediaIcon;
