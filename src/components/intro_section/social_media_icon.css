@@ -26,9 +26,11 @@
 
 
 .icon-name{
+    font-family: "Jetbrains Mono";
     margin-right:  5px;
     margin-left:  10px;
     display: block;
-    font-size: 18px;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 

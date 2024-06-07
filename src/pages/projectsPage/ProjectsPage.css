@@ -16,14 +16,22 @@
 
 .projects-grid {
   display: grid;
+  justify-content: center; 
+  align-items: center; 
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
-  padding: 100px 200px;
- 
+  gap: 100px 0px;
+  padding: 100px 10%;
     
 }
   
   .projects-item {
+    display: flex;
    padding-top: 200px;
    scroll-snap-align: start;
+   max-width: 500px;
+   /* width: 30vw; */
+   width: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
   }

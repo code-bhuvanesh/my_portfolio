@@ -11,7 +11,7 @@ function SkillSection(props) {
         <ul style={{ padding: "0px" }}>
           {props.skills.map((d) => (
             <li>
-              <img className="skill-icon" src={`/skill_icons/${d}.png`} />
+              {/* <img className="skill-icon" src={`/skill_icons/${d}.png`} /> */}
               {d}
             </li>
           ))}

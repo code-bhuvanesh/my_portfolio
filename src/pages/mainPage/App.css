@@ -13,8 +13,8 @@
     scroll-snap-align: start;
     box-sizing: border-box;
     /* padding-top: 50px; */
-    height: 100vh;
-    max-height: 100vh;
+    /* height: 100vh; */
+    height: 1080px;
   }
 
 /* animation intro page */

@@ -18,7 +18,7 @@ function ProjectCard(props) {
   return (
     <>
       <div
-        className="projects-card frosted-container"
+        className="projects-card"
         // onClick={() => window.open(props.projectlink, "_blank")}
         onClick={() => openPopup()}
         onMouseEnter={() => setIsCarExpand(true)}
@@ -41,14 +41,15 @@ function ProjectCard(props) {
           {props.projectDescription}
         </p>
       </div>
-      <ProjectsPopup
-        isOpen={isOpen}
-        closePopup={closePopup}
-        projectName={props.projectName}
-        projectimage={props.projectimage}
-        projectlink={props.projectlink}
-        projectDescription={props.projectDescription}
-      />
+      {isOpen ? (
+        <ProjectsPopup
+          closePopup={closePopup}
+          projectName={props.projectName}
+          projectimage={props.projectimage}
+          projectlink={props.projectlink}
+          projectDescription={props.projectDescription}
+        />
+      ) : null}
     </>
   );
 }
