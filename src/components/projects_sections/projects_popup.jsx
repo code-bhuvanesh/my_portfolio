@@ -32,7 +32,7 @@ function ProjectsPopup(props) {
               <div style={{ marginTop: "20px" }}>
                 <SocialMediaIcon
                   iconname="GITHUB"
-                  iconlink={props.projectslink}
+                  iconlink={props.projectlink}
                   iconpath="/github_icon.png"
                   alwaysVisible={true}
                 />

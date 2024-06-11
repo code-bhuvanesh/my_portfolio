@@ -8,7 +8,10 @@ function SocialMediaIcon(props) {
     <div
       onMouseEnter={() => setShowName(true)}
       onMouseLeave={() => setShowName(false)}
-      onClick={() => window.open(props.iconlink, "_blank")}
+      onClick={() => {
+        console.log(props.iconlink);
+        return window.open(props.iconlink, "_blank");
+      }}
       className="social-media-icon"
       style={showname ? { borderColor: "white" } : {}}
     >
