@@ -28,8 +28,8 @@ var portfolioData = {
   //create a background image sist nav connect app college bus tracking with gps hardware simple minimalistic 2d vector style black and white and blue themed
   Projects: [
     {
-      name: "sist nav connect",
-      link: "https://github.com/code-bhuvanesh/sist_nav_connect",
+      name: "nav connect",
+      link: "https://github.com/code-bhuvanesh/Nav_connect",
       image: "/project_backgrounds/nav_connect.jpg",
       description: `SIST NAV Connect is a bus tracking app for college students, offering
       real-time information on bus routes and arrival times. It uses a custom
