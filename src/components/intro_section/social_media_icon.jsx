@@ -1,39 +1,27 @@
-import { useState } from "react";
-import "./social_media_icon.css";
+import PropTypes from "prop-types";
 
 function SocialMediaIcon(props) {
-  var [showname, setShowName] = useState(false);
-
   return (
-    <div
-      onMouseEnter={() => setShowName(true)}
-      onMouseLeave={() => setShowName(false)}
-      onClick={() => {
-        console.log(props.iconlink);
-        return window.open(props.iconlink, "_blank");
-      }}
-      className="social-media-icon"
-      style={showname ? { borderColor: "white" } : {}}
+    <a
+      className="social-link-chip"
+      href={props.iconlink}
+      rel="noreferrer"
+      target="_blank"
     >
       <img
-        className="social-icon"
+        className="h-[1rem] w-[1rem] object-contain invert opacity-50"
         src={props.iconpath}
         alt={props.iconname + " icon"}
       />
-      <h2
-        className="icon-name"
-        style={{
-          display: showname || props.alwaysVisible ? "block" : "None",
-        }}
-      >
-        {props.iconname}
-      </h2>
-    </div>
+      <span className="capitalize xs:hidden">{props.iconname}</span>
+    </a>
   );
 }
 
-SocialMediaIcon.defaultProps = {
-  alwaysVisible: true,
+SocialMediaIcon.propTypes = {
+  iconlink: PropTypes.string.isRequired,
+  iconname: PropTypes.string.isRequired,
+  iconpath: PropTypes.string.isRequired,
 };
 
 export default SocialMediaIcon;

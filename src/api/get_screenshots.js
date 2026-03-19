@@ -1,5 +1,5 @@
 async function fetchScreenshots(repoUrl) {
-  const match = repoUrl.match(/github\.com\/([^\/]+)\/([^\/]+)/);
+  const match = repoUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
 
   if (match && match.length >= 3) {
     console.log("url matched");

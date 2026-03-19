@@ -1,0 +1,288 @@
+{
+  "brandName": "Bhuvanesh",
+  "navigation": [
+    { "id": "intro", "label": "Home" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "about", "label": "About" }
+  ],
+  "floatingIcons": [
+    {
+      "name": "Flutter",
+      "icon": "/skill_icons/Flutter.png",
+      "x": "8%",
+      "y": "12%",
+      "size": "58px",
+      "delay": "0s",
+      "blur": "9px",
+      "opacity": 0.42
+    },
+    {
+      "name": "Code",
+      "icon": "/skill_icons/code_icon.svg",
+      "x": "86%",
+      "y": "14%",
+      "size": "52px",
+      "delay": "-1.4s",
+      "blur": "8px",
+      "opacity": 0.36
+    },
+    {
+      "name": "Android",
+      "icon": "/skill_icons/Native Android.png",
+      "x": "12%",
+      "y": "76%",
+      "size": "60px",
+      "delay": "-2.4s",
+      "blur": "10px",
+      "opacity": 0.38
+    },
+    {
+      "name": "iOS",
+      "icon": "/skill_icons/ios_icon.svg",
+      "x": "84%",
+      "y": "74%",
+      "size": "50px",
+      "delay": "-3s",
+      "blur": "8px",
+      "opacity": 0.34
+    },
+    {
+      "name": "Dart",
+      "icon": "/skill_icons/Dart.png",
+      "x": "49%",
+      "y": "10%",
+      "size": "48px",
+      "delay": "-1s",
+      "blur": "7px",
+      "opacity": 0.3
+    },
+    {
+      "name": "Java",
+      "icon": "/skill_icons/Java.png",
+      "x": "6%",
+      "y": "46%",
+      "size": "46px",
+      "delay": "-2s",
+      "blur": "7px",
+      "opacity": 0.28
+    },
+    {
+      "name": "Kotlin",
+      "icon": "/skill_icons/Kotlin.png",
+      "x": "92%",
+      "y": "46%",
+      "size": "46px",
+      "delay": "-3.6s",
+      "blur": "7px",
+      "opacity": 0.28
+    }
+  ],
+  "intro": {
+    "eyebrow": "Flutter Developer • App Builder • Product Crafter",
+    "titleLines": ["Flutter apps,", "smooth UX,", "real-world impact."],
+    "lead": "I am a Flutter developer and app builder focused on creating fast, reliable mobile products. I build Android and iOS experiences with clean architecture, thoughtful UI, and practical backend integrations. From prototypes to production-ready apps, I care about performance, usability, and maintainable code.",
+    "actions": [
+      {
+        "label": "Explore Projects",
+        "href": "#projects",
+        "variant": "primary"
+      },
+      {
+        "label": "View Resume",
+        "href": "/my_resume.pdf",
+        "target": "_blank",
+        "rel": "noreferrer",
+        "variant": "secondary"
+      }
+    ],
+    "socialMedia": [
+      {
+        "name": "github",
+        "image": "/github_icon.png",
+        "link": "https://github.com/code-bhuvanesh"
+      },
+      {
+        "name": "linkedin",
+        "image": "/linkedin_icon.png",
+        "link": "https://www.linkedin.com/in/bhuvanesh-devaraj/"
+      },
+      {
+        "name": "instagram",
+        "image": "/instagram_icon.png",
+        "link": "https://www.instagram.com/ambitious__guy/"
+      }
+    ],
+    "profile": {
+      "image": "/my_profile.png",
+      "imageAlt": "Bhuvanesh portrait",
+      "name": "Bhuvanesh Devaraj",
+      "role": "Flutter developer building Android and iOS apps with polished product experiences.",
+      "metrics": [
+        { "value": "10+", "label": "Apps and products" },
+        { "value": "Flutter", "label": "Primary stack" },
+        { "value": "Android + iOS", "label": "Cross-platform delivery" }
+      ]
+    }
+  },
+  "projectsSection": {
+    "kicker": "Selected Work",
+    "title": "Featured Flutter and Mobile Projects",
+    "description": "A few builds that show how I solve real-world problems across Flutter, Django, IoT, and AI-driven ideas.",
+    "viewAll": {
+      "label": "See all projects",
+      "href": "/projects"
+    },
+    "featuredCount": 3,
+    "cardTag": "Featured project",
+    "viewDetailsLabel": "View details"
+  },
+  "projectsPage": {
+    "backLinkText": "← Back Home",
+    "kicker": "Archive",
+    "title": "A broader look at the projects I've built.",
+    "description": "Mobile apps, IoT systems, utility tools, and experiments that helped me grow as a developer.",
+    "cardTag": "Project",
+    "viewDetailsLabel": "View details"
+  },
+  "projectPopup": {
+    "tag": "Project details",
+    "closeAriaLabel": "Close project popup",
+    "screenshotsTitle": "Screenshots",
+    "githubIcon": {
+      "name": "github",
+      "image": "/github_icon.png"
+    }
+  },
+  "aboutSection": {
+    "kicker": "Capabilities",
+    "title": "Tools, technologies, and the kind of work I enjoy building.",
+    "description": "I like products that feel smooth to use and practical to maintain, whether they live on mobile, the web, or connect to real hardware."
+  },
+  "skills": [
+    {
+      "name": "Languages",
+      "items": ["Python", "Java", "Dart", "Kotlin", "JavaScript", "C++"]
+    },
+    {
+      "name": "Technologies",
+      "items": [
+        "Flutter",
+        "Native Android",
+        "Selenium",
+        "ESP32 IoT",
+        "REST API Integration"
+      ]
+    },
+    {
+      "name": "Backend and Database",
+      "items": ["Django", "Firebase", "MySQL", "PostgreSQL"]
+    }
+  ],
+  "contactSection": {
+    "kicker": "Contact",
+    "title": "Let's build something thoughtful.",
+    "description": "If you have an app idea, internship opportunity, or product collaboration in mind, I'd love to hear about it.",
+    "email": {
+      "address": "bhuvaneshdeavaraj@gmail.com",
+      "icon": "/email_icon.png",
+      "iconAlt": "email icon"
+    }
+  },
+  "projects": [
+    {
+      "name": "Habit Buddy",
+      "project folder": "habit_buddy",
+      "link": "https://github.com/code-bhuvanesh/habit_tracker",
+      "playstore" : "https://play.google.com/store/apps/details?id=com.bhuvanesh.habit_buddy",
+      "image": "/project_backgrounds/habit_buddy.png",
+      "repo_private": true,
+      "project_screenshots": [
+        "/project_screenshots/habit_buddy/Screenshot 1.jpg",
+        "/project_screenshots/habit_buddy/Screenshot 2.jpg",
+        "/project_screenshots/habit_buddy/Screenshot 5.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-01-08-43-34_4352014c2810586d5bcdf553f5bea3c4.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-01-08-47-06_4352014c2810586d5bcdf553f5bea3c4.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-01-09-28-06_4352014c2810586d5bcdf553f5bea3c4.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-01-09-38-62_4352014c2810586d5bcdf553f5bea3c4.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-01-09-47-26_4352014c2810586d5bcdf553f5bea3c4.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-01-09-49-60_4352014c2810586d5bcdf553f5bea3c4.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-01-09-52-50_4352014c2810586d5bcdf553f5bea3c4.jpg",
+        "/project_screenshots/habit_buddy/Screenshot_2025-12-03-16-57-05-20_4352014c2810586d5bcdf553f5bea3c4.jpg"
+      ],
+      "description": "Habit Buddy is the ultimate habit tracking app for anyone looking to build consistency and transform their life through better daily habits. Whether you want to exercise more, read daily, meditate, or develop any positive habit — Habit Buddy makes it easy, beautiful, and completely private"
+    },
+    {
+      "name" : "Movie Ticket Radar",
+      "link": "https://github.com/code-bhuvanesh/Movie-Ticket-Radar",
+      "image": "/project_backgrounds/ticket_radar.png",
+      "description": "Ticket Radar is a cross-platform Flutter application (Android & Windows) designed to help you catch movie tickets before they sell out. It monitors cinema booking availability in the background and notifies you the moment tickets open up."
+    },
+    {
+      "name": "sist hub",
+      "link": "https://github.com/code-bhuvanesh/sist_hub_app",
+      "image": "/project_backgrounds/sist_hub.jpg",
+      "description": "SIST Hub is a university app that supports communication and collaboration among students and staff. It provides a centralized platform to share information, seek help, and stay informed across departments."
+    },
+    {
+      "name": "nav connect",
+      "link": "https://github.com/code-bhuvanesh/Nav_connect",
+      "image": "/project_backgrounds/nav_connect.jpg",
+      "description": "SIST NAV Connect is a bus tracking app for college students, offering real-time information on bus routes and arrival times. It uses a custom GPS system with ESP32, SIM800L, and NE6M hardware, sending data to a Django-based backend. The system also includes an admin dashboard for managing bus routes, assigning drivers, and monitoring locations in real time."
+    },
+    
+    {
+      "name": "emo tunes",
+      "link": "https://github.com/code-bhuvanesh/EMO-Tunes",
+      "image": "/project_backgrounds/emo_tunes.jpg",
+      "description": "An app where a user scans their face and the app identifies emotional state (happy, sad, etc.) using AI, then plays related music through Spotify integration."
+    },
+    {
+      "name": "grocery picker",
+      "link": "https://github.com/code-bhuvanesh/grocery-picker",
+      "image": "/project_backgrounds/grocery_picker.jpg",
+      "description": "Grocery Picker is an e-commerce app that connects shopkeepers directly with customers. Shopkeepers list stock, and customers browse nearby shops, add items to cart, make payments, and place orders."
+    },
+    {
+      "name": "sathyabam cgpa calculator",
+      "link": "https://github.com/code-bhuvanesh/sathyabam_cgpa_calculator",
+      "image": "/project_backgrounds/cgpa_calculator.jpg",
+      "description": "A CGPA calculator app designed for Sathyabama University students. It calculates cumulative GPA from semester marks and supports 170 courses across branches."
+    },
+    {
+      "name": "Student Recognizer",
+      "link": "https://github.com/code-bhuvanesh/student_recognizer",
+      "image": "/project_backgrounds/student_recognizer.jpg",
+      "description": "A mobile app that retrieves student details by capturing a photo and matching against a pre-trained face database using facial recognition."
+    },
+    {
+      "name": "Your Travel Friend",
+      "link": "https://github.com/code-bhuvanesh/YourTravelFriend",
+      "image": "/project_backgrounds/your_travel_friend.jpg",
+      "description": "An Android app developed for the Technovation Hackathon that promotes shared travel by helping users connect with others heading to the same destination."
+    },
+    {
+      "name": "Task Count",
+      "link": "https://github.com/code-bhuvanesh/task_count",
+      "image": "/project_backgrounds/task_count.jpg",
+      "description": "A Flutter task management app that tracks daily completion and provides detailed monthly and yearly statistics for each task."
+    },
+    {
+      "name": "Bingo",
+      "link": "https://github.com/code-bhuvanesh/bingo",
+      "image": "/project_backgrounds/bingo.jpg",
+      "description": "A Flutter multiplayer version of the classic Bingo game using Firebase backend for real-time gameplay with friends."
+    },
+    {
+      "name": "Home Automation",
+      "link": "https://github.com/code-bhuvanesh/home_automation",
+      "image": "/project_backgrounds/home_automation.jpg",
+      "description": "An IoT solution using ESP32 and relay modules to control home appliances through a Flutter app after simple pairing and setup."
+    },
+    {
+      "name": "Hand Gesture",
+      "link": "https://github.com/code-bhuvanesh/HandGesture",
+      "image": "/project_backgrounds/hand_gesture.jpg",
+      "description": "A Python app using MediaPipe to detect hand gestures for controlling Windows windows and capturing screenshots."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="iosIconTitle">
+  <title id="iosIconTitle">iOS icon</title>
+  <defs>
+    <linearGradient id="iosGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e6f5ff" />
+      <stop offset="100%" stop-color="#9ac8ff" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="42" fill="url(#iosGradient)" />
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2" />
+  <text x="50" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#1f4f82">iOS</text>
+</svg>
