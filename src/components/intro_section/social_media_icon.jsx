@@ -9,7 +9,7 @@ function SocialMediaIcon(props) {
       target="_blank"
     >
       <img
-        className="h-[1rem] w-[1rem] object-contain invert opacity-50"
+        className="h-[1rem] w-[1rem] object-contain brightness-0 invert"
         src={props.iconpath}
         alt={props.iconname + " icon"}
       />
