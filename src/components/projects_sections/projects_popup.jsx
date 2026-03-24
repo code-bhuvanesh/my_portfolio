@@ -19,6 +19,8 @@ const OVERLAY_TRANSITION = {
   ease: [0.4, 0, 0.2, 1],
 };
 
+const EMPTY_SCREENSHOTS = [];
+
 function ProjectsPopup({
   closePopup,
   projectDescription,
@@ -27,7 +29,7 @@ function ProjectsPopup({
   projectlink,
   projectPlaystore,
   repoPrivate = false,
-  projectScreenshots = [],
+  projectScreenshots = EMPTY_SCREENSHOTS,
   triggerRect = null,
 }) {
   const primaryLink = projectPlaystore || (!repoPrivate ? projectlink : null);
@@ -132,7 +134,7 @@ function ProjectsPopup({
   const popupContent = (
     /* Overlay — fade in/out */
     <motion.div
-      className="project-popup-overlay fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6"
+      className="project-popup-overlay fixed inset-0 z-999 flex items-center justify-center p-4 sm:p-6"
       style={{
         backdropFilter: "blur(28px) saturate(1.4)",
         WebkitBackdropFilter: "blur(28px) saturate(1.4)",
@@ -150,7 +152,7 @@ function ProjectsPopup({
     >
       {/* Shell — macOS Genie spring animation */}
       <motion.div
-        className="project-popup-shell mx-auto flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden border border-white/[0.1]"
+        className="project-popup-shell mx-auto flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden border border-white/10"
         style={{
           background: "rgba(16, 16, 26, 0.85)",
           backdropFilter: "blur(40px) saturate(1.8)",
@@ -169,7 +171,7 @@ function ProjectsPopup({
       >
         {/* ── Glass titlebar ── */}
         <div
-          className="flex items-center gap-3 border-b border-white/[0.08] px-5 py-3 sm:px-6 shrink-0"
+          className="flex shrink-0 items-center gap-3 border-b border-white/8 px-5 py-3 sm:px-6"
           style={{ background: "rgba(255, 255, 255, 0.03)" }}
         >
           {/* Traffic light buttons */}
@@ -179,7 +181,7 @@ function ProjectsPopup({
               type="button"
               onClick={closePopup}
               aria-label="Close popup"
-              className="relative h-[13px] w-[13px] rounded-full bg-[#ff5f57] shadow-[0_0_6px_rgba(255,95,87,0.4)] cursor-pointer border-0 p-0 transition-all duration-150 hover:brightness-110"
+              className="relative h-3.25 w-3.25 rounded-full bg-[#ff5f57] shadow-[0_0_6px_rgba(255,95,87,0.4)] cursor-pointer border-0 p-0 transition-all duration-150 hover:brightness-110"
             >
               <span className="absolute inset-0 flex items-center justify-center text-[9px] font-bold text-black/0 group-hover/dots:text-black/70 transition-colors leading-none">
                 ×
@@ -191,7 +193,7 @@ function ProjectsPopup({
               type="button"
               onClick={closePopup}
               aria-label="Minimize popup"
-              className="relative h-[13px] w-[13px] rounded-full bg-[#febc2e] shadow-[0_0_6px_rgba(254,188,46,0.4)] cursor-pointer border-0 p-0 transition-all duration-150 hover:brightness-110"
+              className="relative h-3.25 w-3.25 rounded-full bg-[#febc2e] shadow-[0_0_6px_rgba(254,188,46,0.4)] cursor-pointer border-0 p-0 transition-all duration-150 hover:brightness-110"
             >
               <span className="absolute inset-0 flex items-center justify-center text-[9px] font-bold text-black/0 group-hover/dots:text-black/70 transition-colors leading-none">
                 −
@@ -205,7 +207,7 @@ function ProjectsPopup({
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Open project in new tab"
-                className="relative h-[13px] w-[13px] rounded-full bg-[#28c840] shadow-[0_0_6px_rgba(40,200,64,0.4)] cursor-pointer border-0 p-0 transition-all duration-150 hover:brightness-110 block"
+                className="relative block h-3.25 w-3.25 rounded-full bg-[#28c840] shadow-[0_0_6px_rgba(40,200,64,0.4)] cursor-pointer border-0 p-0 transition-all duration-150 hover:brightness-110"
               >
                 <span className="absolute inset-0 flex items-center justify-center text-[7px] font-bold text-black/0 group-hover/dots:text-black/70 transition-colors leading-none">
                   ⤢
@@ -214,7 +216,7 @@ function ProjectsPopup({
             ) : (
               <div
                 aria-hidden="true"
-                className="relative h-[13px] w-[13px] rounded-full bg-[#28c840]/30 border border-[#28c840]/20"
+                className="relative h-3.25 w-3.25 rounded-full border border-[#28c840]/20 bg-[#28c840]/30"
               />
             )}
           </div>
@@ -228,7 +230,7 @@ function ProjectsPopup({
           </span>
 
           {/* Spacer */}
-          <div className="w-[52px]"></div>
+          <div className="w-13"></div>
         </div>
 
         {/* ── Two-column content ── */}
@@ -246,7 +248,7 @@ function ProjectsPopup({
                 className="inline-flex w-fit items-center gap-2 rounded-full border border-xc-blue/20 bg-xc-blue/8 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-xc-blue backdrop-blur-sm"
                 style={{ fontFamily: '"JetBrains Mono", monospace' }}
               >
-                <span className="opacity-50">//</span>
+                <span className="opacity-50">{"//"}</span>
                 {projectPopup.tag}
               </span>
 
@@ -261,11 +263,11 @@ function ProjectsPopup({
                 className="mt-3 max-w-md text-[0.75rem] leading-6 text-white/40"
                 style={{ fontFamily: '"JetBrains Mono", monospace' }}
               >
-                <span className="text-xc-green">// </span>
-                A closer look at the product direction and implementation.
+                <span className="text-xc-green">{"// "}</span>A closer look at the
+                product direction and implementation.
               </p>
 
-              <div className="relative mt-6 overflow-hidden rounded-xl border border-white/[0.08] shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+              <div className="relative mt-6 overflow-hidden rounded-xl border border-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
                 <img
                   className="aspect-[4/4.8] w-full object-cover object-center"
                   src={projectimage}
@@ -275,13 +277,13 @@ function ProjectsPopup({
 
               <div className="mt-4 flex flex-wrap gap-2">
                 <span
-                  className="rounded-full bg-white/[0.04] border border-white/[0.08] px-2.5 py-1 text-[0.62rem] font-semibold text-xc-text-dimmed backdrop-blur-sm"
+                  className="rounded-full border border-white/8 bg-white/4 px-2.5 py-1 text-[0.62rem] font-semibold text-xc-text-dimmed backdrop-blur-sm"
                   style={{ fontFamily: '"JetBrains Mono", monospace' }}
                 >
                   {repoPrivate ? "Private Repository" : "Repository-backed"}
                 </span>
                 <span
-                  className="rounded-full bg-white/[0.04] border border-white/[0.08] px-2.5 py-1 text-[0.62rem] font-semibold text-xc-text-dimmed backdrop-blur-sm"
+                  className="rounded-full border border-white/8 bg-white/4 px-2.5 py-1 text-[0.62rem] font-semibold text-xc-text-dimmed backdrop-blur-sm"
                   style={{ fontFamily: '"JetBrains Mono", monospace' }}
                 >
                   {repoPrivate ? "Internal screenshots" : "GitHub screenshots"}
@@ -298,7 +300,7 @@ function ProjectsPopup({
             {/* Scrollable content */}
             <div className="min-h-0 flex-1 overflow-y-auto px-5 pb-5 pt-5 sm:px-6 sm:pb-6">
               <div
-                className="rounded-xl border border-white/[0.08] p-4"
+                className="rounded-xl border border-white/8 p-4"
                 style={{
                   background: "rgba(255, 255, 255, 0.04)",
                   backdropFilter: "blur(8px)",
@@ -317,7 +319,11 @@ function ProjectsPopup({
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <img src="/playstore_icon.svg" alt="" className="h-4 w-4 opacity-80" />
+                    <img
+                      src="/playstore_icon.svg"
+                      alt=""
+                      className="h-4 w-4 opacity-80"
+                    />
                     View on Play Store
                   </a>
                 )}
@@ -328,7 +334,11 @@ function ProjectsPopup({
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <img src="/github_icon.png" alt="" className="h-4 w-4 object-contain invert opacity-60" />
+                    <img
+                      src="/github_icon.png"
+                      alt=""
+                      className="h-4 w-4 object-contain invert opacity-60"
+                    />
                     {hasPlayStore ? "GitHub" : "View GitHub Repository"}
                   </a>
                 )}
@@ -343,7 +353,7 @@ function ProjectsPopup({
 
               {isLoadingScreenshots ? (
                 <div
-                  className="mt-6 rounded-xl border border-white/[0.08] p-4 text-[0.78rem] leading-6 text-xc-text-secondary"
+                  className="mt-6 rounded-xl border border-white/8 p-4 text-[0.78rem] leading-6 text-xc-text-secondary"
                   style={{
                     fontFamily: '"JetBrains Mono", monospace',
                     background: "rgba(255, 255, 255, 0.03)",
@@ -351,7 +361,7 @@ function ProjectsPopup({
                 >
                   <span className="text-xc-orange">fetching</span>
                   <span className="text-xc-text-dimmed">(</span>
-                  <span className="text-xc-green">"screenshots"</span>
+                  <span className="text-xc-green">{'"screenshots"'}</span>
                   <span className="text-xc-text-dimmed">)</span>
                   <span className="text-xc-text-dimmed">...</span>
                 </div>
@@ -367,7 +377,7 @@ function ProjectsPopup({
                     {screenshotImages.map((image) => (
                       <img
                         key={image.download_url}
-                        className="w-full rounded-xl border border-white/[0.08] object-cover shadow-soft"
+                        className="w-full rounded-xl border border-white/8 object-cover shadow-soft"
                         style={{ background: "rgba(10,10,15,0.8)" }}
                         src={image.download_url}
                         alt={`${projectName} screenshot`}
@@ -377,13 +387,13 @@ function ProjectsPopup({
                 </div>
               ) : (
                 <div
-                  className="mt-6 rounded-xl border border-dashed border-white/[0.12] p-4 text-[0.78rem] leading-6 text-xc-text-dimmed"
+                  className="mt-6 rounded-xl border border-dashed border-white/12 p-4 text-[0.78rem] leading-6 text-xc-text-dimmed"
                   style={{
                     fontFamily: '"JetBrains Mono", monospace',
                     background: "rgba(255, 255, 255, 0.02)",
                   }}
                 >
-                  <span className="text-xc-green">// </span>
+                  <span className="text-xc-green">{"// "}</span>
                   No screenshots folder found in this repository.
                 </div>
               )}
