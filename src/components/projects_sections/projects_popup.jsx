@@ -263,8 +263,8 @@ function ProjectsPopup({
                 className="mt-3 max-w-md text-[0.75rem] leading-6 text-white/40"
                 style={{ fontFamily: '"JetBrains Mono", monospace' }}
               >
-                <span className="text-xc-green">{"// "}</span>A closer look at the
-                product direction and implementation.
+                <span className="text-xc-green">{"// "}</span>A closer look at
+                the product direction and implementation.
               </p>
 
               <div className="relative mt-6 overflow-hidden rounded-xl border border-white/8 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
