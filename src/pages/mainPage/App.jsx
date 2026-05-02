@@ -33,31 +33,28 @@ function App() {
 
   useEffect(() => {
     const sections = Array.from(document.querySelectorAll("[data-section]"));
-    const lastSectionId = sections[sections.length - 1]?.id;
+    
+    // Intersection Observer to detect when a section is in the middle of the screen
+    const observerOptions = {
+      root: null,
+      rootMargin: "-45% 0px -45% 0px", // Tight center trigger
+      threshold: 0
+    };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setCurrentSection(entry.target.id);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "-20% 0px -30% 0px",
-        threshold: [0.05, 0.2, 0.4],
-      }
-    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setCurrentSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
 
     sections.forEach((section) => observer.observe(section));
 
-    /* Detect bottom-of-page to activate the last section */
+    // Fallback for top of page
     const handleScroll = () => {
-      const scrollBottom = window.scrollY + window.innerHeight;
-      const pageHeight = document.documentElement.scrollHeight;
-      if (pageHeight - scrollBottom < 100 && lastSectionId) {
-        setCurrentSection(lastSectionId);
+      if (window.scrollY < 100) {
+        setCurrentSection("home");
       }
     };
 

@@ -6,7 +6,7 @@ function HeroSection() {
   return (
     <div className="grid h-full min-h-0 content-center gap-10 lg:gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(16rem,0.85fr)]">
       {/* Left: Text content */}
-      <div className="order-2 flex flex-col justify-center gap-8 lg:order-1">
+      <div className="order-1 flex flex-col justify-center gap-8 lg:order-1">
         {/* Greeting chip */}
         <div className="animate-m3-reveal-up">
           <span className="m3-label text-[1rem] sm:text-[1.125rem] px-5 py-2 sm:px-6 sm:py-2.5 gap-3">
@@ -14,7 +14,6 @@ function HeroSection() {
             {hero.greeting}
           </span>
         </div>
-
         {/* Headline */}
         <h1
           className="animate-m3-reveal-up [animation-delay:0.05s] m-0 text-[clamp(2.5rem,6vw,4.5rem)] font-semibold leading-[1.08] tracking-[-0.03em]"
@@ -92,7 +91,7 @@ function HeroSection() {
         </div>
 
       {/* Right: Hero illustration */}
-      <div className="relative order-1 flex items-center justify-center animate-m3-reveal-up [animation-delay:0.1s] lg:order-2">
+      <div className="relative order-2 flex items-center justify-center animate-m3-reveal-up [animation-delay:0.1s] lg:order-2">
         <img
           className="w-full max-w-md lg:max-w-none object-contain rounded-[4.625rem] animate-m3-float drop-shadow-[0_20px_60px_rgba(168,199,250,0.15)]"
           src="/hero_illustration.png"
