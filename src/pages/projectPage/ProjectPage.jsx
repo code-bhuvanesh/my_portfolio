@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import portfolioData from "../../constants.js";
 import fetchScreenshots from "../../api/get_screenshots.js";
 
@@ -11,11 +11,13 @@ function ProjectPage() {
   const { projectSlug } = useParams();
 
   // Find project across both published apps and open source
-  const allProjects = [
-    ...portfolioData.publishedApps.map((p) => ({ ...p, type: "published" })),
-    ...portfolioData.opensourceProjects.map((p) => ({ ...p, type: "opensource" })),
-  ];
-  const project = allProjects.find((p) => slugify(p.name) === projectSlug);
+  const project = useMemo(() => {
+    const allProjects = [
+      ...portfolioData.publishedApps.map((p) => ({ ...p, type: "published" })),
+      ...portfolioData.opensourceProjects.map((p) => ({ ...p, type: "opensource" })),
+    ];
+    return allProjects.find((p) => slugify(p.name) === projectSlug);
+  }, [projectSlug]);
 
   const [screenshots, setScreenshots] = useState([]);
   const [loadingScreenshots, setLoadingScreenshots] = useState(true);
@@ -40,7 +42,7 @@ function ProjectPage() {
     };
   }, [handleMouseMove, handleMouseLeave]);
 
-  // Scroll to top on mount
+  // Scroll to top on mount or slug change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [projectSlug]);
@@ -48,21 +50,40 @@ function ProjectPage() {
   // Fetch screenshots
   useEffect(() => {
     if (!project) return;
+
+    let isMounted = true;
     setLoadingScreenshots(true);
+    setScreenshots([]); // Reset for new project
 
     if (project.project_screenshots && project.project_screenshots.length > 0) {
       setScreenshots(project.project_screenshots.map((url) => ({ download_url: url })));
       setLoadingScreenshots(false);
     } else if (project.github && !project.repo_private) {
       fetchScreenshots(project.github)
-        .then((data) => setScreenshots(data || []))
-        .catch(() => setScreenshots([]))
-        .finally(() => setLoadingScreenshots(false));
+        .then((data) => {
+          if (isMounted) {
+            setScreenshots(data || []);
+          }
+        })
+        .catch(() => {
+          if (isMounted) {
+            setScreenshots([]);
+          }
+        })
+        .finally(() => {
+          if (isMounted) {
+            setLoadingScreenshots(false);
+          }
+        });
     } else {
       setScreenshots([]);
       setLoadingScreenshots(false);
     }
-  }, [project]);
+
+    return () => {
+      isMounted = false;
+    };
+  }, [project?.name]); // Use name as stable dependency
 
   if (!project) {
     return (
@@ -216,50 +237,63 @@ function ProjectPage() {
             </div>
 
             {/* Screenshots */}
-            <div className="mt-8">
-              <h2
-                className="m-0 text-[1.25rem] font-medium text-m3-on-surface mb-5"
-                style={{ fontFamily: '"Outfit", sans-serif' }}
-              >
-                <span className="material-symbols-rounded text-[20px] align-middle mr-2">photo_library</span>
-                Screenshots
-              </h2>
+            <div className="mt-12">
+              <div className="flex items-center justify-between mb-6">
+                <h2
+                  className="m-0 text-[1.25rem] font-medium text-m3-on-surface"
+                  style={{ fontFamily: '"Outfit", sans-serif' }}
+                >
+                  <span className="material-symbols-rounded text-[20px] align-middle mr-2 text-m3-primary">photo_library</span>
+                  Screenshots
+                </h2>
+                <span className="text-[0.75rem] font-medium text-m3-on-surface-variant bg-m3-surface-container-high px-3 py-1 rounded-full">
+                  {screenshots.length} Images
+                </span>
+              </div>
 
               {loadingScreenshots ? (
                 <div
-                  className="flex items-center gap-3 p-5"
+                  className="flex items-center justify-center gap-3 p-12"
                   style={{
                     background: "var(--m3-surface-container)",
-                    borderRadius: "var(--m3-shape-large)",
+                    borderRadius: "var(--m3-shape-extra-large)",
                   }}
                 >
-                  <span className="material-symbols-rounded text-m3-primary animate-spin text-[20px]">progress_activity</span>
-                  <span className="text-[0.875rem] text-m3-on-surface-variant">Loading screenshots...</span>
+                  <span className="material-symbols-rounded text-m3-primary animate-spin text-[24px]">progress_activity</span>
+                  <span className="text-[0.9375rem] text-m3-on-surface-variant font-medium">Fetching gallery...</span>
                 </div>
               ) : screenshots.length > 0 ? (
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-6 sm:gap-8 justify-center">
                   {screenshots.map((image, i) => (
-                    <img
+                    <div 
                       key={i}
-                      className="w-full object-cover shadow-m3-2"
-                      style={{ borderRadius: "var(--m3-shape-large)" }}
-                      src={image.download_url}
-                      alt={`${project.name} screenshot ${i + 1}`}
-                      loading="lazy"
-                    />
+                      className="group relative aspect-[9/19] w-full max-h-[70vh] overflow-hidden bg-m3-surface-container-low shadow-m3-1 hover:shadow-m3-3 transition-all duration-500 hover:-translate-y-1"
+                      style={{ 
+                        borderRadius: "var(--m3-shape-large)",
+                        maxWidth: "calc(70vh * 9 / 19)" 
+                      }}
+                    >
+                      <img
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        src={image.download_url}
+                        alt={`${project.name} screenshot ${i + 1}`}
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
                   ))}
                 </div>
               ) : (
                 <div
-                  className="flex items-center gap-3 p-5"
+                  className="flex flex-col items-center justify-center gap-3 p-12 text-center"
                   style={{
                     background: "var(--m3-surface-container)",
-                    borderRadius: "var(--m3-shape-large)",
+                    borderRadius: "var(--m3-shape-extra-large)",
                     border: "1px dashed var(--m3-outline-variant)",
                   }}
                 >
-                  <span className="material-symbols-rounded text-m3-outline text-[20px]">image_not_supported</span>
-                  <span className="text-[0.875rem] text-m3-on-surface-variant">No screenshots available.</span>
+                  <span className="material-symbols-rounded text-m3-outline text-[40px]">image_not_supported</span>
+                  <p className="text-[0.9375rem] text-m3-on-surface-variant font-medium">Gallery currently unavailable</p>
                 </div>
               )}
             </div>

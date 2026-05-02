@@ -1,10 +1,8 @@
 import portfolioData from "../../constants.js";
-import { useNavigate } from "react-router-dom";
-import { slugify } from "../../pages/projectPage/ProjectPage.jsx";
+import ProjectCard from "./project_card.jsx";
 
 function OpenSourceSection() {
   const { opensourceSection, opensourceProjects } = portfolioData;
-  const navigate = useNavigate();
 
   return (
     <div className="animate-m3-reveal-up [animation-delay:0.08s]">
@@ -26,48 +24,12 @@ function OpenSourceSection() {
       </div>
 
       {/* Divider */}
-      <hr className="m3-divider mb-8" />
+      <hr className="m3-divider mb-10" />
 
-      {/* Projects grid — image + name only */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      {/* Projects grid */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {opensourceProjects.map((project) => (
-          <button
-            key={project.name}
-            type="button"
-            className="group relative cursor-pointer overflow-hidden border-none p-0 outline-none text-left"
-            style={{ borderRadius: "var(--m3-shape-extra-large)", background: "transparent" }}
-            onClick={() => navigate(`/project/${slugify(project.name)}`)}
-          >
-            <div
-              className="overflow-hidden"
-              style={{
-                borderRadius: "var(--m3-shape-extra-large)",
-                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.25)",
-              }}
-            >
-              <img
-                className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
-                src={project.image}
-                alt={project.name}
-              />
-              {/* Name overlay */}
-              <div
-                className="absolute inset-x-0 bottom-0 flex items-end p-4"
-                style={{
-                  background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)",
-                  borderRadius: "0 0 var(--m3-shape-extra-large) var(--m3-shape-extra-large)",
-                  height: "55%",
-                }}
-              >
-                <p
-                  className="m-0 text-[0.9375rem] font-medium text-white capitalize truncate w-full"
-                  style={{ fontFamily: '"Outfit", sans-serif' }}
-                >
-                  {project.name}
-                </p>
-              </div>
-            </div>
-          </button>
+          <ProjectCard key={project.name} project={project} />
         ))}
       </div>
     </div>

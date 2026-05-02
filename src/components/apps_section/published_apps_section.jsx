@@ -69,7 +69,7 @@ function PublishedAppsSection() {
 
       {/* Carousel: active card + next preview */}
       <div
-        className="flex gap-5 items-stretch"
+        className="flex gap-4 sm:gap-6 items-stretch"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
@@ -82,16 +82,16 @@ function PublishedAppsSection() {
           }}
         >
           <button
-            className="flex w-full h-full cursor-pointer flex-col text-left lg:flex-row border-none p-0 bg-transparent overflow-hidden"
+            className="flex w-full h-full cursor-pointer flex-col text-left md:flex-row border-none p-0 bg-transparent overflow-hidden"
             onClick={handleOpen}
             type="button"
           >
             {/* Image side */}
-            <div className="relative overflow-hidden lg:w-[42%] xl:w-[38%]">
+            <div className="relative overflow-hidden md:w-[45%] lg:w-[40%] xl:w-[35%]">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeApp.name + "-img"}
-                  className="aspect-[16/10] w-full object-cover lg:h-full lg:aspect-auto"
+                  className="aspect-[16/10] w-full object-cover md:h-full md:aspect-auto"
                   src={activeApp.image}
                   alt={activeApp.name}
                   variants={imageVariants}
@@ -123,7 +123,7 @@ function PublishedAppsSection() {
             </div>
 
             {/* Content side */}
-            <div className="flex flex-1 flex-col justify-center p-6 sm:p-8 lg:p-10 overflow-hidden">
+            <div className="flex flex-1 flex-col justify-center p-6 sm:p-8 lg:p-12 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeApp.name + "-content"}
@@ -135,7 +135,7 @@ function PublishedAppsSection() {
                 >
                   {/* Title */}
                   <motion.h3
-                    className="m-0 text-[1.75rem] font-medium leading-tight text-m3-on-surface capitalize"
+                    className="m-0 text-[clamp(1.5rem,4vw,2rem)] font-medium leading-tight text-m3-on-surface capitalize"
                     style={{ fontFamily: '"Outfit", sans-serif' }}
                     variants={titleVariants}
                     initial="enter"
@@ -150,7 +150,7 @@ function PublishedAppsSection() {
                   <div className="mt-3 flex flex-wrap items-center gap-2">
                     {activeApp.downloads && (
                       <span
-                        className="inline-flex items-center gap-1.5 rounded-full-m3 px-3 py-1.5 text-[0.8125rem] font-medium text-m3-green"
+                        className="inline-flex items-center gap-1.5 rounded-full-m3 px-3 py-1.5 text-[0.75rem] sm:text-[0.8125rem] font-medium text-m3-green"
                         style={{ background: "rgba(168, 218, 181, 0.12)" }}
                       >
                         <span className="material-symbols-rounded text-[16px]">download</span>
@@ -158,7 +158,7 @@ function PublishedAppsSection() {
                       </span>
                     )}
                     <span
-                      className="inline-flex items-center gap-1.5 rounded-full-m3 px-3 py-1.5 text-[0.8125rem] font-medium text-m3-on-surface-variant"
+                      className="inline-flex items-center gap-1.5 rounded-full-m3 px-3 py-1.5 text-[0.75rem] sm:text-[0.8125rem] font-medium text-m3-on-surface-variant"
                       style={{ background: "var(--m3-surface-container-highest)" }}
                     >
                       {activeApp.category}
@@ -166,14 +166,14 @@ function PublishedAppsSection() {
                   </div>
 
                   {/* Description */}
-                  <p className="m3-body mt-4 max-w-xl line-clamp-3">
+                  <p className="m3-body mt-4 max-w-xl line-clamp-2 sm:line-clamp-3 text-[0.875rem] sm:text-[0.9375rem]">
                     {activeApp.description}
                   </p>
 
                   {/* Tech chips */}
                   <div className="mt-5 flex flex-wrap gap-2">
                     {activeApp.tech?.map((tech) => (
-                      <span className="m3-chip-filled" key={tech}>{tech}</span>
+                      <span className="m3-chip-filled h-7 sm:h-8 px-3 sm:px-4 text-[0.75rem] sm:text-[0.8125rem]" key={tech}>{tech}</span>
                     ))}
                   </div>
 
@@ -181,31 +181,31 @@ function PublishedAppsSection() {
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     {activeApp.playstore && (
                       <a
-                        className="m3-btn-filled"
+                        className="m3-btn-filled scale-90 sm:scale-100 origin-left"
                         href={activeApp.playstore}
                         rel="noreferrer"
                         target="_blank"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <span className="material-symbols-rounded text-[18px]">download</span>
-                        Get on Play Store
+                        Play Store
                       </a>
                     )}
                     {!activeApp.repo_private && activeApp.github && (
                       <a
-                        className="m3-btn-tonal"
+                        className="m3-btn-tonal scale-90 sm:scale-100 origin-left"
                         href={activeApp.github}
                         rel="noreferrer"
                         target="_blank"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <img src="/github_icon.png" alt="" className="h-4 w-4 object-contain invert opacity-70" />
-                        Source Code
+                        Source
                       </a>
                     )}
-                    <span className="m3-btn-text">
+                    <span className="m3-btn-text scale-90 sm:scale-100 origin-left">
                       <span className="material-symbols-rounded text-[18px]">open_in_new</span>
-                      View Details
+                      Details
                     </span>
                   </div>
                 </motion.div>
@@ -242,7 +242,7 @@ function PublishedAppsSection() {
             onClick={() => goTo(nextIndex)}
             className="relative hidden lg:flex flex-col justify-end overflow-hidden border-none p-0 cursor-pointer"
             style={{
-              width: "220px",
+              width: "30%",
               flexShrink: 0,
               borderRadius: "var(--m3-shape-extra-large)",
               background: "var(--m3-surface-container-low)",

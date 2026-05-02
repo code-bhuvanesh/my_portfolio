@@ -76,9 +76,9 @@
       "iconAlt": "email icon"
     },
     "tags": [
-      "Open to internships",
-      "Freelance friendly",
-      "App collaborations"
+      { "label": "Working at Oracle", "icon": "/oracle_logo.svg" },
+      { "label": "Freelance friendly", "icon": "handshake" },
+      { "label": "App collaborations", "icon": "group" }
     ]
   },
   "skills": [
@@ -111,7 +111,7 @@
       "image": "/project_backgrounds/habit_buddy.png",
       "repo_private": true,
       "category": "Productivity",
-      "downloads": "500+",
+      "downloads": "760+",
       "project_screenshots": [
         "/project_screenshots/habit_buddy/Screenshot 1.jpg",
         "/project_screenshots/habit_buddy/Screenshot 2.jpg",
@@ -135,7 +135,7 @@
       "image": "/project_backgrounds/cgpa_calculator.jpg",
       "repo_private": false,
       "category": "Education",
-      "downloads": "10,000+",
+      "downloads": "13,600+",
       "description": "CGPA calculator designed for Sathyabama University students. Calculates cumulative GPA from semester marks and supports 170+ courses across all branches. Trusted by thousands of students.",
       "tech": ["Flutter", "Dart", "Material Design"]
     }
@@ -146,78 +146,88 @@
       "github": "https://github.com/code-bhuvanesh/Movie-Ticket-Radar",
       "image": "/project_backgrounds/ticket_radar.png",
       "description": "Cross-platform Flutter app that monitors cinema booking availability and notifies you the moment tickets open up.",
-      "tech": ["Flutter", "Dart", "Background Services"]
+      "tech": ["Flutter", "Dart", "Background Services"],
+      "color": "#FF5252"
     },
     {
       "name": "SIST Hub",
       "github": "https://github.com/code-bhuvanesh/sist_hub_app",
       "image": "/project_backgrounds/sist_hub.jpg",
       "description": "University app that supports communication and collaboration among students and staff with a centralized platform.",
-      "tech": ["Flutter", "Firebase", "Cloud Messaging"]
+      "tech": ["Flutter", "Firebase", "Cloud Messaging"],
+      "color": "#2196F3"
     },
     {
       "name": "Nav Connect",
       "github": "https://github.com/code-bhuvanesh/Nav_connect",
       "image": "/project_backgrounds/nav_connect.jpg",
       "description": "Real-time bus tracking app with custom GPS hardware using ESP32, SIM800L, and Django backend for college students.",
-      "tech": ["Flutter", "Django", "ESP32", "IoT"]
+      "tech": ["Flutter", "Django", "ESP32", "IoT"],
+      "color": "#4CAF50"
     },
     {
       "name": "Emo Tunes",
       "github": "https://github.com/code-bhuvanesh/EMO-Tunes",
       "image": "/project_backgrounds/emo_tunes.jpg",
       "description": "Face-scan emotion recognition app that identifies your mood using AI and plays matching music through Spotify.",
-      "tech": ["Flutter", "AI/ML", "Spotify API"]
+      "tech": ["Flutter", "AI/ML", "Spotify API"],
+      "color": "#9C27B0"
     },
     {
       "name": "Grocery Picker",
       "github": "https://github.com/code-bhuvanesh/grocery-picker",
       "image": "/project_backgrounds/grocery_picker.jpg",
       "description": "E-commerce app connecting shopkeepers directly with customers for browsing, ordering, and payment.",
-      "tech": ["Flutter", "Firebase", "Payments"]
+      "tech": ["Flutter", "Firebase", "Payments"],
+      "color": "#FF9800"
     },
-
     {
       "name": "Student Recognizer",
       "github": "https://github.com/code-bhuvanesh/student_recognizer",
       "image": "/project_backgrounds/student_recognizer.jpg",
       "description": "Mobile app that retrieves student details by face matching against a pre-trained database using facial recognition.",
-      "tech": ["Flutter", "Python", "OpenCV"]
+      "tech": ["Flutter", "Python", "OpenCV"],
+      "color": "#3F51B5"
     },
     {
       "name": "Your Travel Friend",
       "github": "https://github.com/code-bhuvanesh/YourTravelFriend",
       "image": "/project_backgrounds/your_travel_friend.jpg",
       "description": "Hackathon app promoting shared travel by helping users connect with others heading to the same destination.",
-      "tech": ["Android", "Java", "Maps"]
+      "tech": ["Android", "Java", "Maps"],
+      "color": "#009688"
     },
     {
       "name": "Task Count",
       "github": "https://github.com/code-bhuvanesh/task_count",
       "image": "/project_backgrounds/task_count.jpg",
       "description": "Task management app that tracks daily completion and provides monthly and yearly statistics for each task.",
-      "tech": ["Flutter", "Dart", "SQLite"]
+      "tech": ["Flutter", "Dart", "SQLite"],
+      "color": "#607D8B"
     },
     {
       "name": "Bingo",
       "github": "https://github.com/code-bhuvanesh/bingo",
       "image": "/project_backgrounds/bingo.jpg",
       "description": "Multiplayer Bingo game with Firebase backend for real-time gameplay with friends.",
-      "tech": ["Flutter", "Firebase", "Realtime DB"]
+      "tech": ["Flutter", "Firebase", "Realtime DB"],
+      "color": "#F44336"
     },
     {
       "name": "Home Automation",
       "github": "https://github.com/code-bhuvanesh/home_automation",
       "image": "/project_backgrounds/home_automation.jpg",
       "description": "IoT home automation using ESP32 and relay modules, controlled through a Flutter companion app.",
-      "tech": ["Flutter", "ESP32", "IoT"]
+      "tech": ["Flutter", "ESP32", "IoT"],
+      "color": "#FFC107"
     },
     {
       "name": "Hand Gesture",
       "github": "https://github.com/code-bhuvanesh/HandGesture",
       "image": "/project_backgrounds/hand_gesture.jpg",
       "description": "Python app using MediaPipe for hand gesture recognition to control Windows and capture screenshots.",
-      "tech": ["Python", "MediaPipe", "OpenCV"]
+      "tech": ["Python", "MediaPipe", "OpenCV"],
+      "color": "#00BCD4"
     }
   ]
 }

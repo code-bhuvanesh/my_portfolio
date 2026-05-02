@@ -34,10 +34,28 @@ function ContactSection() {
             <div className="mt-5 flex flex-wrap gap-2">
               {contactSection.tags.map((tag) => (
                 <span
-                  key={tag}
+                  key={tag.label}
                   className="m3-chip"
                 >
-                  {tag}
+                  {tag.icon.endsWith('.svg') || tag.icon.startsWith('/') ? (
+                    <span 
+                      className="h-[18px] w-[18px] bg-m3-primary"
+                      style={{
+                        maskImage: `url(${tag.icon})`,
+                        WebkitMaskImage: `url(${tag.icon})`,
+                        maskRepeat: 'no-repeat',
+                        WebkitMaskRepeat: 'no-repeat',
+                        maskPosition: 'center',
+                        WebkitMaskPosition: 'center',
+                        maskSize: 'contain',
+                        WebkitMaskSize: 'contain'
+                      }}
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <span className="material-symbols-rounded text-[18px] text-m3-primary">{tag.icon}</span>
+                  )}
+                  {tag.label}
                 </span>
               ))}
             </div>
