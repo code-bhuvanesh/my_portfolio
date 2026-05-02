@@ -7,7 +7,17 @@ function NavBar({ currentSection }) {
 
   return (
     <nav className="fixed left-1/2 bottom-6 sm:top-4 sm:bottom-auto z-50 w-fit max-w-[calc(100vw-2rem)] -translate-x-1/2">
-      <div className="m3-top-app-bar shadow-m3-3 sm:shadow-m3-2 !p-1.5 backdrop-blur-lg">
+      <div 
+        className="!p-1.5 flex items-center"
+        style={{
+          background: "color-mix(in srgb, var(--m3-surface) 30%, transparent)",
+          backdropFilter: "blur(24px) saturate(180%)",
+          WebkitBackdropFilter: "blur(24px) saturate(180%)",
+          border: "1px solid rgba(255, 255, 255, 0.08)",
+          borderRadius: "var(--m3-shape-full)",
+          boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
+        }}
+      >
         <ul className="flex items-center gap-1 list-none m-0 p-0 overflow-visible">
           {navigation.map((item) => {
             const isActive = currentSection === item.id;
@@ -17,8 +27,12 @@ function NavBar({ currentSection }) {
                 {isActive && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute inset-0 bg-m3-secondary-container shadow-sm"
-                    style={{ borderRadius: "var(--m3-shape-full)" }}
+                    className="absolute inset-0 shadow-sm"
+                    style={{ 
+                      background: "color-mix(in srgb, var(--m3-secondary-container) 80%, transparent)",
+                      borderRadius: "var(--m3-shape-full)",
+                      border: "1px solid rgba(255, 255, 255, 0.05)"
+                    }}
                     transition={{
                       type: "spring",
                       stiffness: 400,
