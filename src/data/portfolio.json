@@ -69,7 +69,7 @@
   "contactSection": {
     "label": "Get In Touch",
     "title": "Let's build something great together.",
-    "description": "Whether it's an app idea, freelance opportunity, or collaboration — I'd love to hear from you.",
+    "description": "Whether it's an app idea, a potential collaboration, or just a technical chat — I'd love to hear from you.",
     "email": {
       "address": "bhuvaneshdeavaraj@gmail.com",
       "icon": "/email_icon.png",
@@ -77,7 +77,7 @@
     },
     "tags": [
       { "label": "Working at Oracle", "icon": "/oracle_logo.svg" },
-      { "label": "Freelance friendly", "icon": "handshake" },
+      { "label": "Ready to hear your ideas to build apps", "icon": "lightbulb" },
       { "label": "App collaborations", "icon": "group" }
     ]
   },

@@ -44,8 +44,8 @@ function ContactSection() {
 
           <div className="mt-6 flex flex-wrap gap-2.5">
             {[
-              "Open to internships",
-              "Freelance friendly",
+              "Working at Oracle",
+              "Ready to hear your ideas to build apps",
               "App product collaborations",
             ].map((tag) => (
               <span
@@ -79,13 +79,13 @@ function ContactSection() {
             <span>{contactSection.email.address}</span>
           </a>
 
-          <span
+          {/* <span
             className="text-[0.72rem] text-xc-text-dimmed"
             style={{ fontFamily: '"JetBrains Mono", monospace' }}
           >
             <span className="text-xc-green">// </span>
             Usually replies within a day.
-          </span>
+          </span> */}
         </div>
       </div>
     </div>

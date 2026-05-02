@@ -224,7 +224,7 @@
 @layer components {
   /* ── Layout helpers ── */
   .page-frame {
-    @apply relative z-10 mx-auto w-full max-w-[80%] px-4;
+    @apply relative z-10 mx-auto w-full max-w-[94%] sm:max-w-[88%] lg:max-w-[80%] px-4;
   }
 
   /* ── Material 3 Surface Cards ── */
