@@ -1,24 +1,12 @@
-import AboutSection from "../../components/about_section/about_section.jsx";
-import IntroSection from "../../components/intro_section/intro_section.jsx";
-import ProjectsSection from "../../components/projects_sections/projects_section.jsx";
 import NavBar from "../../components/nav_bar/nav_bar.jsx";
+import HeroSection from "../../components/hero_section/hero_section.jsx";
+import PublishedAppsSection from "../../components/apps_section/published_apps_section.jsx";
+import OpenSourceSection from "../../components/opensource_section/opensource_section.jsx";
+import ContactSection from "../../components/contact_section/contact_section.jsx";
 import { useEffect, useState, useCallback } from "react";
-import portfolioData from "../../constants.js";
-import FloatingIcons from "../../components/floating_icons/floating_icons.jsx";
-
-const sectionComponents = {
-  intro: IntroSection,
-  projects: ProjectsSection,
-  about: AboutSection,
-};
 
 function App() {
-  const availableSections = portfolioData.navigation.filter(
-    (section) => sectionComponents[section.id]
-  );
-  const [currentSection, setCurrentSection] = useState(
-    availableSections[0]?.id || "intro"
-  );
+  const [currentSection, setCurrentSection] = useState("home");
 
   /* ── Mouse tracking for blueprint grid spotlight ── */
   const handleMouseMove = useCallback((e) => {
@@ -83,56 +71,48 @@ function App() {
 
   return (
     <div className="relative overflow-x-clip">
-      <FloatingIcons />
-
-      {/* Liquid glass ambient orbs */}
+      {/* M3 ambient gradient orbs */}
       <div
-        className="pointer-events-none fixed -right-32 top-10 z-0 h-96 w-96 rounded-full blur-[140px] animate-drift opacity-20"
+        className="pointer-events-none fixed -right-40 -top-40 z-0 h-[500px] w-[500px] rounded-full blur-[180px] opacity-[0.07]"
         style={{
           background:
-            "radial-gradient(circle, rgba(96,184,255,0.4), transparent)",
+            "radial-gradient(circle, #A8C7FA, transparent)",
         }}
       ></div>
       <div
-        className="pointer-events-none fixed -bottom-32 -left-20 z-0 h-80 w-80 rounded-full blur-[140px] animate-drift-reverse opacity-15"
+        className="pointer-events-none fixed -bottom-40 -left-20 z-0 h-[400px] w-[400px] rounded-full blur-[160px] opacity-[0.05]"
         style={{
           background:
-            "radial-gradient(circle, rgba(196,156,255,0.35), transparent)",
-        }}
-      ></div>
-      <div
-        className="pointer-events-none fixed right-1/4 top-1/2 z-0 h-64 w-64 rounded-full blur-[120px] animate-drift opacity-10"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(126,232,168,0.3), transparent)",
+            "radial-gradient(circle, #D6BEE4, transparent)",
         }}
       ></div>
 
       <NavBar currentSection={currentSection} />
 
-      <main className="page-frame pb-6 pt-24 sm:pb-8 sm:pt-28 lg:pt-32">
-        {availableSections.map((section) => {
-          const SectionComponent = sectionComponents[section.id];
+      <main className="relative z-10 w-full">
+        <section id="home" data-section="home" className="flex min-h-[100dvh] items-center scroll-mt-0">
+          <div className="page-frame w-full py-20 sm:py-24 lg:py-28">
+            <HeroSection />
+          </div>
+        </section>
 
-          return (
-            <section
-              id={section.id}
-              data-section={section.id}
-              key={section.id}
-              className={`${
-                section.id === "about"
-                  ? ""
-                  : "min-h-[calc(100dvh-7.5rem)] sm:min-h-[calc(100dvh-8rem)] lg:min-h-[calc(100dvh-8.5rem)]"
-              } scroll-mt-24 py-0 ${
-                section.id === "intro"
-                  ? ""
-                  : "border-t border-white/[0.04]"
-              }`}
-            >
-              <SectionComponent />
-            </section>
-          );
-        })}
+        <section id="apps" data-section="apps" className="flex min-h-[100dvh] items-center scroll-mt-0">
+          <div className="page-frame w-full py-12 sm:py-16 lg:py-20">
+            <PublishedAppsSection />
+          </div>
+        </section>
+
+        <section id="opensource" data-section="opensource" className="flex min-h-[100dvh] items-center scroll-mt-0">
+          <div className="page-frame w-full py-12 sm:py-16 lg:py-20">
+            <OpenSourceSection />
+          </div>
+        </section>
+
+        <section id="contact" data-section="contact" className="flex min-h-[100dvh] items-center scroll-mt-0">
+          <div className="page-frame w-full py-12 sm:py-16 lg:py-20">
+            <ContactSection />
+          </div>
+        </section>
       </main>
     </div>
   );
